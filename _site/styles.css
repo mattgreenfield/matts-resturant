@@ -1,5 +1,7 @@
 @charset "UTF-8";
 .instructions {
+  font-family: sans-serif;
+  font-weight: normal;
   background: wheat;
   padding: 1em;
   border: 1px solid;
@@ -221,7 +223,8 @@ nav[role="navigation"] li {
   font-size: 1em;
   display: block;
   padding: .5em;
-  border: 2px solid;
+  border: none;
+  border-bottom: 1px solid;
   margin-bottom: 1em; }
 
 .select-input {
@@ -255,6 +258,12 @@ input[type="checkbox"]:after {
 
 span.button {
   float: right; }
+
+.checkbox-container {
+  max-width: 300px;
+  margin-bottom: 2em; }
+  .checkbox-container input {
+    float: right; }
 
 .fieldset {
   margin-bottom: 2em; }

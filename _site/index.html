@@ -12,36 +12,19 @@
 
   
 <aside class="instructions" aria-hidden="true">
-  <p>Here's a dummy booking form for my fictional resturant. Have a play around and try out these scenarios.</p>
-  <ul class="reset-list">
-    <li>
-      You've lost your mouse. **Use the keyboard** alone to complete this form.
-      [disable mouse events]
-      span with class of button
-      no focus state
-      no "skip to content" link
-    </li>
-    <li>
-      You got a black eye in a fight, **use a screen reader**
-      [blur the page out]
-      bad alt text
-      use of icon fonts without label
-      error states are purely colour changes
-    </li>
-  </ul>
 
   <ul class="reset-list">
     <li>
       <button onclick="blurText()">Small Type Mode</button>
     </li>
     <li>
-      <button onclick="blackWhite()">No colour contrast mode</button>
+      <button onclick="blurEverything()">Blur</button>
+    </li>
+    <li>
+      <button onclick="blackWhite()">Greyscale mode</button>
     </li>
     <li>
       <button onclick="tunnelVision()">Tunnel vision mode</button>
-    </li>
-    <li>
-      <button onclick="">Sunny Garden Mode</button>
     </li>
     <li>
       <button onclick="disableMouse()">One Handed Mode</button>
@@ -123,7 +106,7 @@
     <option>Leeds</option>
   </select>
 
-  <h3 class="legend">Your Details</h3>
+  <h2>Your Details</h2>
 
   <input class="text-input" type="text" placeholder="Name">
   <span class="required">(required)</span>
@@ -135,8 +118,8 @@
   <input class="text-input" type="text" placeholder="Email Address">
   <span class="required">(required)</span>
 
-  <h3 class="legend">Dietry Requirements</h3>
-  <div>
+  <h2>Dietry Requirements</h2>
+  <div class="checkbox-container">
     <div>
       <label class="label">Vegetarian</label>
       <input type="checkbox" value="vegetarian">
@@ -190,6 +173,7 @@
       dots: false,
       arrows: false,
       infinite: true,
+      pauseOnFocus: false,
       speed: 100,
       autoplay: true,
       autoplaySpeed: 800,
@@ -206,6 +190,9 @@
     }
     function disableMouse(){
       $('body').css('pointer-events','none');
+    }
+    function blurEverything(){
+      $('body').css('filter','blur(30px)');
     }
     function blurText(){
       $('body').css('filter','blur(1.1px)').css('font-size','14px');

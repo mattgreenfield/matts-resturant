@@ -67,7 +67,8 @@ nav[role="navigation"] li {
   font-size: 1em;
   display: block;
   padding: .5em;
-  border: 2px solid;
+  border: none;
+  border-bottom: 1px solid;
   margin-bottom: 1em;
 }
 .select-input {
@@ -101,6 +102,14 @@ input[type="checkbox"]:after {
 }
 span.button {
   float: right;
+}
+
+.checkbox-container {
+  max-width: 300px;
+  margin-bottom: 2em;
+  input {
+    float: right;
+  }
 }
 
 .fieldset {
