@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+  <ul>
+    {% for item in site.pages %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul> -->
+  <main class="page-constraint">
+    {{page.content}}
+  </main>
+
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script>
+    // Bad
+    $('body.not-a11y-friendly .carousel').slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      speed: 100,
+      autoplay: true,
+      autoplaySpeed: 800,
+    });
+
+    // Good
+    $('body:not(.not-a11y-friendly) .carousel').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      speed: 100,
+      autoplay: false,
+    });
+  </script>
+
+  <!-- Tunnel Vision -->
+  <script>
+    function tunnelVision(){
+      if(!document.getElementById('jsAnythingViewport')){
+        document.body.appendChild(document.createElement('script')).id='jsAnythingViewport';
+        document.getElementById('jsAnythingViewport').src = '//anything.agency/tunnel-vision/tunnelVision.js';
+      }
+    }
+  </script>
+
+
+</body>
+</html>

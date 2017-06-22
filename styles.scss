@@ -1,0 +1,59 @@
+---
+---
+
+@import "slick-theme";
+
+
+body,
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #1f1f1f;
+}
+
+aside {
+  background: wheat;
+  padding: 1em;
+  border: 1px solid;
+}
+
+.page-constraint {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.text-input {
+  font-size: 1em;
+  display: block;
+  padding: .5em;
+  border: 2px solid;
+  margin-bottom: 1em;
+}
+input[type="checkbox"] {
+  display: inline-block;
+}
+input[type="checkbox"]:after {
+  content: "";
+  display: block;
+}
+.label {
+  font-weight: bold;
+}
+.label[data-required=true]:after{
+  content: " (Required)";
+  font-weight: lighter;
+}
+.button {
+  border: none;
+  font-size: 1.2em;
+  background-color: green;
+  padding: .7em;
+}
+
+body.not-a11y-friendly {
+
+}

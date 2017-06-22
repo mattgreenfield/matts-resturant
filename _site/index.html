@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+  <ul>
+    
+        <li><a href="/">Home</a></li>
+    
+        <li><a href="/styles.css"></a></li>
+    
+  </ul> -->
+  <main class="page-constraint">
+    inclusive design - https://24ways.org/2016/what-the-heck-is-inclusive-design/
+                  http://inclusivedesignprinciples.org/
+demos - http://danielfurze.co.uk/a11y-demos/index.html
+
+<aside class="demo-controls" aria-hidden="true">
+  <p>Here's a dummy booking form for my fictional resturant. Have a play around and try out these scenarios.</p>
+  <ul>
+    <li>
+      You've lost your mouse. **Use the keyboard** alone to complete this form.
+      [disable mouse events]
+      span with class of button
+      no focus state
+      no "skip to content" link
+    </li>
+    <li>
+      You got a black eye in a fight, **use a screen reader**
+      [blur the page out]
+      bad alt text
+      use of icon fonts without label
+      error states are purely colour changes
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <span>Add A11y Improvements</span>
+      <label for="">Yes</label><input type="checkbox" name="a11y-mode" value="on" checked>
+      <label for="">No</label><input type="checkbox" name="a11y-mode" value="off">
+    </li>
+    <li><button>Small Type Mode</button></li>
+    <li><button>No colour contrast mode</button></li>
+    <li><button>Tunnel vision mode</button></li>
+    <li><button>Sunny Garden Mode</button></li>
+    <li><button>One Handed Mode</button></li>
+  </ul>
+
+</aside>
+
+
+<h1>Book a table</h1>
+<span>at Brightons swankiest resturant</span>
+
+<div>Carousel</div>
+<img src="" alt="">
+<ul class="carousel slick-slider">
+  <li class="carousel__item">
+    <img src="https://placebear.com/700/400" alt="">
+    <span>2 - 4 - 1 on all dishes</span>
+  </li>
+  <li class="carousel__item">
+    <img src="https://placebear.com/700/401" alt="">
+    <span>Tasty food, it's so good</span>
+  </li>
+  <li class="carousel__item">
+    <img src="https://placebear.com/700/402" alt="">
+    <span>Bank Holiday BBQ Spectular</span>
+  </li>
+  <li class="carousel__item">
+    <img src="https://placebear.com/700/403" alt="">
+    <span>Sale Now On</span>
+  </li>
+  <li class="carousel__item">
+    <img src="https://placebear.com/700/404" alt="">
+    <span>Sale Now On</span>
+  </li>
+</ul>
+
+<h2>Book By Post</h2>
+<address>10 Roady Road, Roadsville.</address>
+
+<h2>Book By Phone</h2>
+<ul>
+  <li>Brighton: 01212331313942</li>
+  <li>London: 890716467274</li>
+  <li>Worthing: 482937523987</li>
+  <li>Bognor: 27875220</li>
+  <li>Leeds: 2387298789789</li>
+</ul>
+
+<h2>Book Online</h2>
+
+<form action="">
+  <label class="label" for="contact-location">Select a resturant</label>
+  <select name="" id="contact-location">
+    <option>Brighton</option>
+    <option>London</option>
+    <option>Worthing</option>
+    <option>Bognor</option>
+    <option>Leeds</option>
+  </select>
+
+  <fieldset>
+    <legend>Your Details</legend>
+    <label class="label" for="contact-name" data-required="true" >Name</label>
+    <input class="text-input" type="text" id="contact-name" required>
+
+    <label class="label" for="contact-dob">Date of Birth</label>
+    <input class="text-input" type="date" id="contact-dob">
+
+    <label class="label" for="contact-email" data-required="true" >Email Address</label>
+    <input class="text-input" type="email" id="contact-email" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Dietry Requirements <span>Select all that apply</span></legend>
+    <ul>
+      <li>
+        <label class="label">Vegetarian</label>
+        <input type="checkbox" value="vegetarian">
+      </li>
+
+      <li>
+        <label class="label">Vegan</label>
+        <input type="checkbox" value="vegan">
+      </li>
+
+      <li>
+        <label class="label">Gluten Free</label>
+        <input type="checkbox" value="gluten">
+      </li>
+
+      <li>
+        <label class="label">Fussy Eater</label>
+        <input type="checkbox" value="fussy">
+      </li>
+
+      <li>
+        <label class="label">No Olives</label>
+        <input type="checkbox" value="no-olives">
+      </li>
+
+    </ul>
+
+  </fieldset>
+
+  <label for="contact-message">Additional Message</label>
+  <textarea name="name" id="contact-message" class="text-input"></textarea>
+
+  <button class="button" type="submit">Submit Booking</button>
+
+</form>
+
+  </main>
+
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script>
+    // Bad
+    $('body.not-a11y-friendly .carousel').slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      speed: 100,
+      autoplay: true,
+      autoplaySpeed: 800,
+    });
+
+    // Good
+    $('body:not(.not-a11y-friendly) .carousel').slick({
+      dots: true,
+      arrows: true,
+      infinite: false,
+      speed: 100,
+      autoplay: false,
+    });
+  </script>
+
+  <!-- Tunnel Vision -->
+  <script>
+    function tunnelVision(){
+      if(!document.getElementById('jsAnythingViewport')){
+        document.body.appendChild(document.createElement('script')).id='jsAnythingViewport';
+        document.getElementById('jsAnythingViewport').src = '//anything.agency/tunnel-vision/tunnelVision.js';
+      }
+    }
+  </script>
+
+
+</body>
+</html>
