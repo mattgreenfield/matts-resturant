@@ -22,7 +22,6 @@ body {
   font-size: 16px;
   color: #1f1f1f;
   font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
 }
 
 h1,
@@ -105,10 +104,10 @@ span.button {
 }
 
 .checkbox-container {
-  max-width: 300px;
   margin-bottom: 2em;
   input {
-    float: right;
+    float: left;
+    margin-right: 5px;
   }
 }
 
