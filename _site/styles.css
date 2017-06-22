@@ -176,9 +176,6 @@
 body,
 body * {
   box-sizing: border-box; }
-  body:focus,
-  body *:focus {
-    outline: 0; }
 
 body {
   margin: 0;
@@ -222,8 +219,7 @@ nav[role="navigation"] li {
   font-size: 1em;
   display: block;
   padding: .5em;
-  border: none;
-  border-bottom: 1px solid;
+  border: 1px solid;
   margin-bottom: 1em; }
 
 .select-input {
@@ -255,9 +251,6 @@ input[type="checkbox"]:after {
   background-color: green;
   padding: .7em; }
 
-span.button {
-  float: right; }
-
 .checkbox-container {
   margin-bottom: 2em; }
   .checkbox-container input {
@@ -268,7 +261,9 @@ span.button {
   margin-bottom: 2em; }
 
 .legend {
-  font-size: 1.4em; }
+  font-size: 1.2em; }
+  .legend > span {
+    font-size: 0.9rem; }
 
 .carousel__item {
   position: relative; }
@@ -278,5 +273,15 @@ span.button {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3em;
-    color: #2a402a;
-    padding: .2em; }
+    color: white;
+    padding: .2em;
+    background-color: rgba(42, 64, 42, 0.8); }
+
+a[href="#main"]:not(:focus) {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden; }

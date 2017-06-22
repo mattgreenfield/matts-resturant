@@ -62,52 +62,53 @@ title: Home
     <option>Leeds</option>
   </select>
 
-  <h2>Your Details</h2>
+  <fieldset class="fieldset">
+    <legend class="legend">Your Details</legend>
+    <label class="label" for="contact-name" data-required="true" >Name</label>
+    <input class="text-input" type="text" id="contact-name" required>
 
-  <input class="text-input" type="text" placeholder="Name">
-  <span class="required">(required)</span>
+    <label class="label" for="contact-dob">Date of Birth</label>
+    <input class="text-input" type="date" id="contact-dob">
 
-  <label class="label" for="contact-dob"></label>
-  <input class="text-input" type="text" placeholder="Date of Birth (mm/dd/yyyy)">
+    <label class="label" for="contact-email" data-required="true" >Email Address</label>
+    <input class="text-input" type="email" id="contact-email" required>
+  </fieldset>
 
+  <fieldset class="fieldset">
+    <legend class="legend">Dietry Requirements <span>Select all that apply</span></legend>
+    <ul class="reset-list checkbox-container">
+      <li>
+        <label for="input-1" class="label">Vegetarian</label>
+        <input type="checkbox" id="input-1" value="vegetarian">
+      </li>
 
-  <input class="text-input" type="text" placeholder="Email Address">
-  <span class="required">(required)</span>
+      <li>
+        <label for="input-2" class="label">Vegan</label>
+        <input type="checkbox" id="input-2" value="vegan">
+      </li>
 
-  <h2>Dietry Requirements</h2>
-  <ul class="reset-list checkbox-container">
-    <li>
-      <label for="input-1" class="label">Vegetarian</label>
-      <input type="checkbox" id="input-1" value="vegetarian">
-    </li>
+      <li>
+        <label for="input-3" class="label">Gluten Free</label>
+        <input type="checkbox" id="input-3" value="gluten">
+      </li>
 
-    <li>
-      <label for="input-2" class="label">Vegan</label>
-      <input type="checkbox" id="input-2" value="vegan">
-    </li>
+      <li>
+        <label for="input-4" class="label">Fussy Eater</label>
+        <input type="checkbox" id="input-4" value="fussy">
+      </li>
 
-    <li>
-      <label for="input-3" class="label">Gluten Free</label>
-      <input type="checkbox" id="input-3" value="gluten">
-    </li>
+      <li>
+        <label for="input-5" class="label">No Olives</label>
+        <input type="checkbox" id="input-5" value="no-olives">
+      </li>
 
-    <li>
-      <label for="input-4" class="label">Fussy Eater</label>
-      <input type="checkbox" id="input-4" value="fussy">
-    </li>
-
-    <li>
-      <label for="input-5" class="label">No Olives</label>
-      <input type="checkbox" id="input-5" value="no-olives">
-    </li>
-
-  </ul>
-
+    </ul>
+  </fieldset>
 
 
   <label for="contact-message">Additional Message</label>
   <textarea name="name" id="contact-message" class="text-input"></textarea>
 
-  <span class="button" type="submit">Submit Booking</span>
+  <button class="button" type="submit">Submit Booking</button>
 
 </form>
