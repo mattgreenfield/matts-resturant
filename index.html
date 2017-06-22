@@ -3,13 +3,9 @@ layout: default
 title: Home
 ---
 
-inclusive design - https://24ways.org/2016/what-the-heck-is-inclusive-design/
-                  http://inclusivedesignprinciples.org/
-demos - http://danielfurze.co.uk/a11y-demos/index.html
-
-<aside class="demo-controls" aria-hidden="true">
+<aside class="instructions" aria-hidden="true">
   <p>Here's a dummy booking form for my fictional resturant. Have a play around and try out these scenarios.</p>
-  <ul>
+  <ul class="reset-list">
     <li>
       You've lost your mouse. **Use the keyboard** alone to complete this form.
       [disable mouse events]
@@ -26,7 +22,7 @@ demos - http://danielfurze.co.uk/a11y-demos/index.html
     </li>
   </ul>
 
-  <ul>
+  <ul class="reset-list">
     <li>
       <span>Add A11y Improvements</span>
       <label for="">Yes</label><input type="checkbox" name="a11y-mode" value="on" checked>
@@ -41,32 +37,38 @@ demos - http://danielfurze.co.uk/a11y-demos/index.html
 
 </aside>
 
-
 <h1>Book a table</h1>
-<span>at Brightons swankiest resturant</span>
 
-<div>Carousel</div>
-<img src="" alt="">
-<ul class="carousel slick-slider">
-  <li class="carousel__item">
-    <img src="https://placebear.com/700/400" alt="">
-    <span>2 - 4 - 1 on all dishes</span>
+<ul class="carousel slick-slider reset-list">
+  <li>
+    <div class="carousel__item">
+      <img src="https://placebear.com/700/400" alt="Two wild bears looking down at the floor in a barron landscape, hunting for food">
+      <span>2 - 4 - 1 on all dishes</span>
+    </div>
   </li>
-  <li class="carousel__item">
-    <img src="https://placebear.com/700/401" alt="">
-    <span>Tasty food, it's so good</span>
+  <li>
+    <div class="carousel__item">
+      <img src="https://placebear.com/700/401" alt="A bear smiling at the camera with it's mouth wide open">
+      <span>Tasty food, it's so good</span>
+    </div>
   </li>
-  <li class="carousel__item">
-    <img src="https://placebear.com/700/402" alt="">
-    <span>Bank Holiday BBQ Spectular</span>
+  <li>
+    <div class="carousel__item">
+      <img src="https://placebear.com/700/402" alt="A bear in shalow water with a freshly caught fish in its mouth">
+      <span>Bank Holiday BBQ Spectular</span>
+    </div>
   </li>
-  <li class="carousel__item">
-    <img src="https://placebear.com/700/403" alt="">
-    <span>Sale Now On</span>
+  <li>
+    <div class="carousel__item">
+      <img src="https://placebear.com/700/403" alt="A black bear standing on it's rear legs">
+      <span>Sale Now On</span>
+    </div>
   </li>
-  <li class="carousel__item">
-    <img src="https://placebear.com/700/404" alt="">
-    <span>Sale Now On</span>
+  <li>
+    <div class="carousel__item">
+      <img src="https://placebear.com/700/404" alt="A bear stranded on a tiny island (bareley big enough for it to stand on) in a flowing river.">
+      <span>Sale Now On</span>
+    </div>
   </li>
 </ul>
 
@@ -74,7 +76,7 @@ demos - http://danielfurze.co.uk/a11y-demos/index.html
 <address>10 Roady Road, Roadsville.</address>
 
 <h2>Book By Phone</h2>
-<ul>
+<ul class="reset-list">
   <li>Brighton: 01212331313942</li>
   <li>London: 890716467274</li>
   <li>Worthing: 482937523987</li>
@@ -86,7 +88,7 @@ demos - http://danielfurze.co.uk/a11y-demos/index.html
 
 <form action="">
   <label class="label" for="contact-location">Select a resturant</label>
-  <select name="" id="contact-location">
+  <select name="" id="contact-location" class="select-input">
     <option>Brighton</option>
     <option>London</option>
     <option>Worthing</option>
@@ -94,8 +96,8 @@ demos - http://danielfurze.co.uk/a11y-demos/index.html
     <option>Leeds</option>
   </select>
 
-  <fieldset>
-    <legend>Your Details</legend>
+  <fieldset class="fieldset">
+    <legend class="legend">Your Details</legend>
     <label class="label" for="contact-name" data-required="true" >Name</label>
     <input class="text-input" type="text" id="contact-name" required>
 
@@ -106,9 +108,9 @@ demos - http://danielfurze.co.uk/a11y-demos/index.html
     <input class="text-input" type="email" id="contact-email" required>
   </fieldset>
 
-  <fieldset>
-    <legend>Dietry Requirements <span>Select all that apply</span></legend>
-    <ul>
+  <fieldset class="fieldset">
+    <legend class="legend">Dietry Requirements <span>Select all that apply</span></legend>
+    <ul class="reset-list">
       <li>
         <label class="label">Vegetarian</label>
         <input type="checkbox" value="vegetarian">
