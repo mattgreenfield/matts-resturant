@@ -52,31 +52,31 @@
 <ul class="carousel slick-slider reset-list">
   <li>
     <div class="carousel__item">
-      <img src="https://placebear.com/700/400" alt="Two wild bears looking down at the floor in a barron landscape, hunting for food">
+      <img src="https://placebear.com/700/400">
       <span>2 - 4 - 1 on all dishes</span>
     </div>
   </li>
   <li>
     <div class="carousel__item">
-      <img src="https://placebear.com/700/401" alt="A bear smiling at the camera with it's mouth wide open">
+      <img src="https://placebear.com/700/401">
       <span>Tasty food, it's so good</span>
     </div>
   </li>
   <li>
     <div class="carousel__item">
-      <img src="https://placebear.com/700/402" alt="A bear in shalow water with a freshly caught fish in its mouth">
+      <img src="https://placebear.com/700/402">
       <span>Bank Holiday BBQ Spectular</span>
     </div>
   </li>
   <li>
     <div class="carousel__item">
-      <img src="https://placebear.com/700/403" alt="A black bear standing on it's rear legs">
+      <img src="https://placebear.com/700/403">
       <span>Sale Now On</span>
     </div>
   </li>
   <li>
     <div class="carousel__item">
-      <img src="https://placebear.com/700/404" alt="A bear stranded on a tiny island (bareley big enough for it to stand on) in a flowing river.">
+      <img src="https://placebear.com/700/404">
       <span>Sale Now On</span>
     </div>
   </li>
@@ -200,6 +200,14 @@
     function blackWhite(){
       $('body').css('filter','grayscale()');
     }
+
+    var pageScrolled = false;
+    $(document).on("scroll", function(){
+      if(!pageScrolled){
+        confirm("Sign up to our newsletter");
+        pageScrolled = true;
+      }
+    });
   </script>
 
 
