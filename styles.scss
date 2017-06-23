@@ -11,10 +11,6 @@ $green: #2a402a;
 body,
 body * {
   box-sizing: border-box;
-
-  &:focus {
-    outline: 0;
-  }
 }
 
 body {
@@ -23,7 +19,6 @@ body {
   font-size: 16px;
   color: #1f1f1f;
   font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
 }
 
 h1,
@@ -69,8 +64,7 @@ nav[role="navigation"] li {
   font-size: 1em;
   display: block;
   padding: .5em;
-  border: none;
-  border-bottom: 1px solid;
+  border: 1px solid;
   margin-bottom: 1em;
 }
 .select-input {
@@ -92,25 +86,19 @@ input[type="checkbox"]:after {
 .label {
   font-weight: bold;
 }
-.label[data-required=true]:after{
-  content: " (Required)";
-  font-weight: lighter;
-}
 .button {
   border: none;
   font-size: 1.2em;
   background-color: green;
   padding: .7em;
 }
-span.button {
-  float: right;
-}
+
 
 .checkbox-container {
-  max-width: 300px;
   margin-bottom: 2em;
   input {
-    float: right;
+    float: left;
+    margin-right: 5px;
   }
 }
 
@@ -118,7 +106,10 @@ span.button {
   margin-bottom: 2em;
 }
 .legend {
-  font-size: 1.4em;
+  font-size: 1.2em;
+  > span {
+    font-size: 0.9rem;
+  }
 }
 
 .carousel {}
@@ -131,9 +122,21 @@ span.button {
     transform: translate(-50%, -50%);
 
     font-size: 3em;
-    color: $green;
+    color: white;
     padding: .2em;
+    background-color: rgba($green, .8)
   }
+}
+
+// 'skip to main' link
+a[href="#main"]:not(:focus) {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
 }
 
 footer {

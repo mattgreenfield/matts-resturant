@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a href="#main">Skip to main content</a>
 
   {% include instructions.html %}
 
@@ -24,16 +25,16 @@
 
   </header>
 
-  <main class="page-constraint">
+  <main class="page-constraint" id="main">
     {{page.content}}
   </main>
 
   <footer>
     <ul class="reset-list list-inline">
-      <li><a href="facebook.com"><span class="icon-brand1"></span></a></li>
-      <li><a href="instagram.com"><span class="icon-brand2"></span></a></li>
-      <li><a href="snapchat.com"><span class="icon-brand3"></span></a></li>
-      <li><a href="tripadvisor.com"><span class="icon-brand4"></span></a></li>
+      <li><a href="facebook.com" aria-label="view our facebook page"><span class="icon-brand"></span></a></li>
+      <li><a href="instagram.com" aria-label="view our instagram page"><span class="icon-brand2"></span></a></li>
+      <li><a href="snapchat.com" aria-label="view our snapchat page"><span class="icon-brand3"></span></a></li>
+      <li><a href="tripadvisor.com" aria-label="view our trip advisor page"><span class="icon-brand4"></span></a></li>
     </ul>
   </footer>
 
@@ -49,13 +50,12 @@
 
   <script>
     var carousel = $('.carousel').slick({
-      dots: false,
-      arrows: false,
-      infinite: true,
-      pauseOnFocus: false,
+      dots: true,
+      arrows: true,
+      infinite: false,
+      pauseOnFocus: true,
       speed: 100,
-      autoplay: true,
-      autoplaySpeed: 800,
+      autoplay: false
     });
 
     // Stop the carousel, in emergencies :D
@@ -85,13 +85,6 @@
       $('body').css('filter','grayscale()');
     }
 
-    var pageScrolled = false;
-    $(document).on("scroll", function(){
-      if(!pageScrolled){
-        confirm("Sign up to our newsletter");
-        pageScrolled = true;
-      }
-    });
   </script>
 
 
