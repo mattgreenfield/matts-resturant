@@ -28,6 +28,15 @@
     {{page.content}}
   </main>
 
+  <footer>
+    <ul class="reset-list list-inline">
+      <li><a href="facebook.com"><span class="icon-brand1"></span></a></li>
+      <li><a href="instagram.com"><span class="icon-brand2"></span></a></li>
+      <li><a href="snapchat.com"><span class="icon-brand3"></span></a></li>
+      <li><a href="tripadvisor.com"><span class="icon-brand4"></span></a></li>
+    </ul>
+  </footer>
+
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
 
@@ -39,7 +48,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   <script>
-    $('.carousel').slick({
+    var carousel = $('.carousel').slick({
       dots: false,
       arrows: false,
       infinite: true,
@@ -48,6 +57,11 @@
       autoplay: true,
       autoplaySpeed: 800,
     });
+
+    // Stop the carousel, in emergencies :D
+    function stopCarousel(){
+      carousel.slick("slickSetOption", "autoplay", false, true);
+    }
   </script>
 
   <!-- Tunnel Vision -->

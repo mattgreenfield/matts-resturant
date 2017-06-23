@@ -41,6 +41,7 @@ h6 {
   list-style-type: none;
 }
 
+.list-inline li,
 nav[role="navigation"] li {
   display: inline-block;
 }
@@ -133,4 +134,10 @@ span.button {
     color: $green;
     padding: .2em;
   }
+}
+
+footer {
+  clear: both;
+  font-size: 3em;
+  margin-top: 2em;
 }
