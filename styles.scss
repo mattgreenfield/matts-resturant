@@ -86,10 +86,6 @@ input[type="checkbox"]:after {
 .label {
   font-weight: bold;
 }
-.label[data-required=true]:after{
-  content: " (Required)";
-  font-weight: lighter;
-}
 .button {
   border: none;
   font-size: 1.2em;
