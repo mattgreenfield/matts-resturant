@@ -4,6 +4,7 @@
 $green: #2a402a;
 
 @import "instructions";
+@import "icons";
 @import "slick-theme";
 
 
@@ -35,6 +36,7 @@ h6 {
   list-style-type: none;
 }
 
+.list-inline li,
 nav[role="navigation"] li {
   display: inline-block;
 }
@@ -139,4 +141,10 @@ a[href="#main"]:not(:focus) {
   width: 1px;
   text-align: left;
   overflow: hidden;
+}
+
+footer {
+  clear: both;
+  font-size: 3em;
+  margin-top: 2em;
 }
