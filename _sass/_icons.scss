@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'icon';
+  src: url('fonts/icons.woff?wxj5hh') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-coin-euro:before {
+  content: "\e93c";
+}
+.icon-coin-pound:before {
+  content: "\e93d";
+}
+.icon-coin-yen:before {
+  content: "\e93e";
+}
+.icon-credit-card:before {
+  content: "\e93f";
+}
+.icon-glass:before {
+  content: "\e9a0";
+}
+.icon-glass2:before {
+  content: "\e9a1";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
+.icon-brand:before {
+  content: "\e900";
+  color: #3b5998;
+}
+.icon-brand2:before {
+  content: "\e901";
+  color: #e4405f;
+}
+.icon-brand3:before {
+  content: "\e902";
+  color: #fffc00;
+}
+.icon-brand4:before {
+  content: "\e903";
+  color: #589442;
+}
+.icon-brand5:before {
+  content: "\e904";
+  color: #1da1f2;
+}
